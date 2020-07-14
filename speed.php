@@ -9,6 +9,8 @@ function wp_dequeue_scripts() {
 
 	}
 }
+add_action('wp_print_scripts', 'wp_dequeue_scripts', 100);
+
 /**
  * Remove Extra Style Sheet From Home Page
  */
@@ -21,7 +23,6 @@ function wp_dequeue_styles() {
 	}
 }
 
-add_action('wp_print_scripts', 'wp_dequeue_scripts', 100);
 add_action('wp_print_styles', 'wp_dequeue_styles', 100);
 
 /**
