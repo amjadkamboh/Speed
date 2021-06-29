@@ -4,8 +4,8 @@
 function wp_dequeue_scripts() {
 	if (is_front_page() && !is_admin()) {
                 
-                wp_dequeue_scripts('woocommerce');
-		wp_deregister_scripts('woocommerce');
+                wp_dequeue_script('woocommerce');
+		wp_deregister_script('woocommerce');
 
 	}
 }
